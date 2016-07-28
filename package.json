@@ -1,0 +1,39 @@
+{
+  "name": "cheeriomongo-scraper",
+  "version": "0.0.0",
+  "description": "a NodeJS web-scraper application that uses Cheerio + MongoDB and allows users to comment on articles",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BFGriffith/CheerioMongo-scraper.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Cheerio",
+    "MongoDB",
+    "MongoJS",
+    "express",
+    "express-handlebars",
+    "request",
+    "body-parser",
+    "web-scraping"
+  ],
+  "author": "BFGriffith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BFGriffith/CheerioMongo-scraper/issues"
+  },
+  "homepage": "https://github.com/BFGriffith/CheerioMongo-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongojs": "^2.4.0",
+    "request": "^2.74.0"
+  }
+}
