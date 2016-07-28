@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "a NodeJS web-scraper application that uses Cheerio + MongoDB and allows users to comment on articles",
   "main": "server.js",
+  "engines": {
+    "node": "6.3.1",
+    "npm": "2.11.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
