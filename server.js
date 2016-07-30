@@ -3,6 +3,10 @@
 var express = require('express');
 var app = express();
 
+//port
+//var PORT = process.env.PORT || 3000;
+var PORT = 3000 || process.env;
+
 // DATABASE configuration:
 // require MongoJS, then save the url of the database + name of collection
 var mongojs = require('mongojs');
@@ -18,6 +22,6 @@ db.on('error', function(err) {
 });
 
 // LISTENER:
-app.listen(3000, function() {
-  console.log('App running on port 3000!');
+app.listen(PORT, function(){
+  console.log('listening on port: ', PORT)
 });
