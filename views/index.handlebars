@@ -1,0 +1,34 @@
+<!-- scraped content -->
+<div class="articles">
+  <div class="container">
+    {{#each articles}}
+      <div class="row">
+        <div class="col-xs-12">
+          <article>
+            <div class="article_content">
+              <h2><a href="{{this.href}}">{{this.title}}</a></h2>
+              <p>{{this.content}}</p>
+            </div>
+            <!-- COMMENT submission -->
+            <form class="commentFormContainer">
+              <fieldset class="form-group comment_submission">
+                <label for="commentSubmission">Deign to comment?</label>
+                <textarea class="form-control comment_box" rows="5" id="commentSubmission" data-role="{{this.article_id}}"></textarea>
+                <br>
+                <button class="btn btn-info submit_comment" data-role="{{this.article_id}}">COMMENT</button>
+              </fieldset>
+            </form>
+            <div class="comments_display" data-role="{{this.article_id}}">
+              {{#each this.comments}}
+                <div class="comments_container" data-role= {{this.posted}}>
+                  <p class="{{this.posted}}">{{this.comment}}</p>
+                  <a href="" class="btn btn-danger delete_comment" data-role="{{this.posted}}">DELETE comment</a>
+                </div>
+              {{/each}}
+            </div>
+          </article>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
