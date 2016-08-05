@@ -1,16 +1,16 @@
 // SUBMIT comments:
 $('.add_comment').on('click', function() {
-
   var commentSection = $(this).parent();
   $(commentSection).empty();
 
-  $(commentSection).html( < form action="/update/`+$(commentSection).data('id')+`"
+  $(commentSection).html( <form action="/update/`+$(commentSection).data('id')+`"
     method = "post" >
     <fieldset class="form-group">
-    <label for = "commentBox" > comment: </label> <textarea class = "form-control"
+    <label for="commentBox">Deign to comment?</label>
+    <textarea class="form-control"
     name = "comment"
     id = "commentBox"
-    rows = "3"> </textarea> </fieldset>
+    rows = "3"> </textarea></fieldset>
 
     <input type = "submit"
     class = "btn btn-info"
