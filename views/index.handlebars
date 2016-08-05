@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- scraped content -->
+  <h1 id="comicsHeader">Comics Assemble!</h1>
+  {{#each results}}
+    <div class="article">
+      <a href="{{this.link}}" target="_blank"><h4 class="article-title text-xs-center">{{this.title}}</h4></a>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 articleIMG">
+          <img class="article-img-top img-rounded" src="{{this.imgURL}}" alt="article image">
+        </div>
+
+        <div class="col-xs-12 col-md-6 articleSummary">
+          <p class="article_summary">{{this.summary}}</p>
+        </div>
+
+      </div>
+      <div class="comments">
+        <div class="text-xs-center button" data-id="{{this._id}}">
+          {{!-- <a href="#" class="btn btn-info btn-lg center-block">Add Comment!</a> --}}
+          <div class="form-group row">
+            <label for="comment" class="col-form-label">Deign to comment?</label>
+            <div>
+              <input class="form-control text-xs-center" type="text" id="comment">
+            </div>
+          </div>
+
+          <ul class="list-group list-group-flush {{this._id}}">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  {{/each}}
+</div>
+
+<script type="text/javascript" src="/scripts/app.js"></script>
+
+</div>
