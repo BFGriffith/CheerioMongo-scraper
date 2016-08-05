@@ -19,8 +19,8 @@ app.set('view engine', 'handlebars');
 require("./controllers/controller.js")(app);
 
 //port
-//var PORT = process.env.PORT || 3000;
-var PORT = 3000 || process.env.PORT;
+var PORT = process.env.PORT || 3000;
+//var PORT = 3000 || process.env.PORT;
 /*
 // DATABASE configuration:
 // require MongoJS, then save the url of the database + name of collection

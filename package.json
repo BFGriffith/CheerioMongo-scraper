@@ -1,6 +1,6 @@
 {
   "name": "cheeriomongo-scraper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a NodeJS web-scraper application that uses Cheerio + MongoDB and allows users to comment on articles",
   "main": "server.js",
   "engines": {
