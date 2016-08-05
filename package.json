@@ -1,8 +1,12 @@
 {
   "name": "cheeriomongo-scraper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a NodeJS web-scraper application that uses Cheerio + MongoDB and allows users to comment on articles",
   "main": "server.js",
+  "engines": {
+    "node": "6.3.1",
+    "npm": "2.11.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -33,6 +37,7 @@
     "cheerio": "^0.20.0",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
     "mongojs": "^2.4.0",
     "request": "^2.74.0"
   }
