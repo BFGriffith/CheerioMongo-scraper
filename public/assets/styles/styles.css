@@ -1,0 +1,21 @@
+/*STYLES*/
+* {
+  font-family: 'Muli', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Rajdhani', sans-serif;
+}
+.commentArea {
+	width: 400px;
+}
+.list-group-item {
+	width: 400px;
+}
+.glyphicon-minus {
+	float: right;
+	color: #C1C1C1;
+	cursor: pointer;
+}
+.glyphicon-minus:hover {
+	color: #EC2519;
+}

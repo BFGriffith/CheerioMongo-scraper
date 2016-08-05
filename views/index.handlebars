@@ -1,0 +1,24 @@
+<!-- scraped content -->
+<h1>Comics Assemble!</h1>
+<ul>
+  {{#each articles}}
+    <li>
+      <h2> <a href='{{this.link}}'>{{this.title}}</a> </h2>
+      <p>{{this.content}}</p>
+      <!-- COMMENTS -->
+      <ul class="list-group" data-id="{{this._id}}">
+        {{#each this.comments}}
+          <li class="list-group-item">
+            {{this}}
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+          </li>
+        {{/each}}
+      </ul>
+
+      <!-- COMMENT submission -->
+      <div class='commentBox' data-id="{{this._id}}">
+        <button type="button" class="btn btn-info add_comment"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+      </div>
+    </li>
+  {{/each}}
+</ul>

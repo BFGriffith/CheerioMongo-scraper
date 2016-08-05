@@ -1,12 +1,27 @@
 // DEPENDENCIES:
 // intialize Express
 var express = require('express');
+var bodyParser = require('body-parser');
+var exphbs = require('express-handlebars');
 var app = express();
+
+app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
+
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+
+require('./controllers/controller.js')(app);
 
 //port
 //var PORT = process.env.PORT || 3000;
 var PORT = 3000 || process.env;
-
+/*
 // DATABASE configuration:
 // require MongoJS, then save the url of the database + name of collection
 var mongojs = require('mongojs');
@@ -20,7 +35,7 @@ var db = mongojs(databaseUrl, collections);
 db.on('error', function(err) {
   console.log('Database Error:', err);
 });
-
+*/
 // LISTENER:
 app.listen(PORT, function(){
   console.log('listening on port: ', PORT)
